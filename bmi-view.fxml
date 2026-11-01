@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="12.0"
+      prefWidth="420.0" prefHeight="560.0"
+      style="-fx-background-color: #F4F7FB;"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.kalkulator.kalkulatorbmi.BmiController">
+
+    <padding>
+        <Insets top="28.0" right="32.0" bottom="28.0" left="32.0"/>
+    </padding>
+
+    <Label text="KALKULATOR BMI"
+           style="-fx-font-size: 25px; -fx-font-weight: bold; -fx-text-fill: #183153;"/>
+
+    <Label text="Body Mass Index Calculator"
+           style="-fx-font-size: 13px; -fx-text-fill: #65758B;"/>
+
+    <VBox spacing="6.0" prefWidth="340.0">
+        <Label text="Nama"
+               style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #27364B;"/>
+        <TextField fx:id="txtNama" promptText="Masukkan nama"
+                   prefHeight="38.0"
+                   style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+    </VBox>
+
+    <VBox spacing="6.0" prefWidth="340.0">
+        <Label text="Berat Badan (kg)"
+               style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #27364B;"/>
+        <TextField fx:id="txtBerat" promptText="Contoh: 60"
+                   prefHeight="38.0"
+                   style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+    </VBox>
+
+    <VBox spacing="6.0" prefWidth="340.0">
+        <Label text="Tinggi Badan (cm)"
+               style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #27364B;"/>
+        <TextField fx:id="txtTinggi" promptText="Contoh: 170"
+                   prefHeight="38.0"
+                   style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
+    </VBox>
+
+    <Button text="HITUNG BMI" onAction="#hitungBMI"
+            prefWidth="340.0" prefHeight="42.0"
+            style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;"/>
+
+    <VBox alignment="CENTER" spacing="8.0" prefWidth="340.0"
+          style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E1E8F0; -fx-border-radius: 12;">
+        <padding>
+            <Insets top="16.0" right="12.0" bottom="16.0" left="12.0"/>
+        </padding>
+        <Label text="HASIL BMI"
+               style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #65758B;"/>
+        <Label fx:id="lblHasil" text="--"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #183153;"/>
+        <Label fx:id="lblKategori" text="Kategori akan muncul di sini"
+               wrapText="true" alignment="CENTER"
+               style="-fx-font-size: 13px; -fx-text-fill: #27364B;"/>
+    </VBox>
+
+    <Button text="RESET" onAction="#reset"
+            prefWidth="340.0" prefHeight="38.0"
+            style="-fx-background-color: transparent; -fx-text-fill: #2563EB; -fx-font-weight: bold; -fx-border-color: #2563EB; -fx-border-radius: 8; -fx-background-radius: 8; -fx-cursor: hand;"/>
+
+</VBox>
